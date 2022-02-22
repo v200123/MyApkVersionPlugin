@@ -1,0 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        maven {
+            url "local-plugin-repository"
+        }
+        maven {
+            url "https://packages.aliyun.com/maven/repository/2172868-snapshot-Nu31eV"
+        }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "MyApkVersionPlugin"
+include ':app'
+include ':apkVersionPlugin'

@@ -1,0 +1,27 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            credentials {
+                username '61cd499ed6190210d8a7ac6a'
+                password 'nAFRqD8F43h4'
+            }
+            url "https://packages.aliyun.com/maven/repository/2172868-snapshot-Nu31eV"
+        }
+    }
+//    C:\Users\Administrator\AndroidStudioProjects\MyApkVersionPlugin\local-plugin-repository\org\gradle\sample\library\1.1
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath 'com.lc.lastcoffee:apkVersionPlugin:1.6'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

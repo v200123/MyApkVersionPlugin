@@ -1,0 +1,88 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'java-library'
+    id 'kotlin'
+    id 'maven-publish'
+}
+group = 'com.lc.lastcoffee'
+version = '1.6'
+
+gradlePlugin {
+    plugins {
+        simplePlugin {
+            id = 'com.lc.versionApkPlugin'
+            displayName = 'apkVersionRename'
+            description = 'Template for people to start their own plugin adventure'
+            implementationClass = 'com.lc.apkversionplugin.MyApkVersionPlugin'
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+publishing {
+    publications {
+
+        maven(MavenPublication) {
+            pom {
+                name = 'My Library'
+                description = 'A concise description of my library'
+                url = 'https://www.baidu.com'
+                properties = [
+                        myProp          : "value",
+                        "prop.with.dots": "anotherValue"
+                ]
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'johnd'
+                        name = 'John Doe'
+                        email = 'john.doe@example.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://example.com/my-library.git'
+                    developerConnection = 'scm:git:ssh://example.com/my-library.git'
+                    url = 'http://example.com/my-library/'
+                }
+                distributionManagement {
+                    relocation {
+                        // New artifact coordinates
+                        groupId = "com.lc.lastcoffee"
+                        artifactId = "apkVersion"
+                        version = "1.0.0"
+                        message = "groupId has been changed"
+                    }
+                }
+            }
+//            groupId = 'org.gradle.sample'
+//            artifactId = 'library'
+//            version = '1.1'
+//            from components.java
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username '61cd499ed6190210d8a7ac6a' // 仓库发布用户名
+                password 'nAFRqD8F43h4' // 仓库发布org.gradle.sample用户密码
+            }
+            name = 'localPluginRepository'
+            url = 'https://packages.aliyun.com/maven/repository/2172868-snapshot-Nu31eV'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.tools.build:gradle:7.1.1'
+
+}
+

@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "MyApkVersionPlugin",
+    "module": "apkVersionPlugin",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "apkVersionPlugin-1.0.jar",
+          "url": "apkVersionPlugin-1.0.jar",
+          "size": 2398,
+          "sha512": "0bb3de599781dedbce7f58d2de9736278965244db2b136c67118bf17f60f16391a353883a712252d4855af59d0da61a4249d0bc69ecc7f66086d2650087cd630",
+          "sha256": "74543a8644a9b0a23df98b4ed4c1411027d99ab815e88714006991f6125bd223",
+          "sha1": "3f36a7c6ffdd3b18e57743c6ceef9d5508c48ec4",
+          "md5": "7b151a32726d94309a88d0fdd7929d95"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "apkVersionPlugin-1.0.jar",
+          "url": "apkVersionPlugin-1.0.jar",
+          "size": 2398,
+          "sha512": "0bb3de599781dedbce7f58d2de9736278965244db2b136c67118bf17f60f16391a353883a712252d4855af59d0da61a4249d0bc69ecc7f66086d2650087cd630",
+          "sha256": "74543a8644a9b0a23df98b4ed4c1411027d99ab815e88714006991f6125bd223",
+          "sha1": "3f36a7c6ffdd3b18e57743c6ceef9d5508c48ec4",
+          "md5": "7b151a32726d94309a88d0fdd7929d95"
+        }
+      ]
+    }
+  ]
+}
